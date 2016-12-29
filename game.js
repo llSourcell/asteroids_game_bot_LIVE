@@ -394,6 +394,15 @@ Game.prototype.display = function(){
 
 	this.ctx.fillStyle = "white";
 	this.ctx.font="20px Arial";
+	
+	//update high score if this gen produces a higher score
+	if (this.score > highScore){
+        	highScore = this.score;
+        	this.ctx.fillText("High Score : "+this.score, 150, 25);
+    	}
+    	else {
+        	this.ctx.fillText("High Score : "+highScore, 150, 25);
+    	}	
 	this.ctx.fillText("Score : "+this.score, 10, 25);
 	this.ctx.fillText("Generation : "+this.generation, 10, 50);
 	this.ctx.fillText("Alive : "+this.alives+" / "+Neuvol.options.population, 10, 75);
