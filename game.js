@@ -4,7 +4,7 @@ var FPS = 60;
 
 var nbSensors = 16;
 var maxSensorSize = 200;
-
+var highScore = 0;
 
 var images = {};
 
